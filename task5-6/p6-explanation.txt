@@ -1,0 +1,14 @@
+  PID STAT
+26880 S+
+
+  PID STAT
+26880 Z+
+
+S means Interruptible sleep (waiting for an event to complete)
+Z means Defunct ("zombie") process, terminated but not reaped by its parent
+Since
+
+Initially, it is in S state which gets interruped on giving the input.
+Later, the child has a variable in its table which is allocated some memory. It has to give this value to the parent process.
+This makes it a zombie process. 
+Also there is a long delay in the parent process hence the it takes time for the zombie process to get cleaned up. As a zombie process cleans up when the parent process exits.
